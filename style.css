@@ -1,0 +1,206 @@
+/* configuracion global y variables */
+:root {
+    --cafe-noir: #4C3D19;
+    --kombu-green: #354024;
+    --moss-green: #889063;
+    --tan: #CFBB99;
+    --bone: #E5D7C4;
+
+    --bg-main: var(--bone);
+    --card-bg: #f2e9dc;
+    --text-primary: var(--café-noir);
+    --text-secondary: var(--kombu-green);
+    --accent: var(--kombu-green);
+    --border: var(--tan);
+
+    --font-heading: 'Syne', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* header */
+.hero {
+    padding: 90px 0 50px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 720px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* secciones de proyectos */
+.proyectos-section {
+    padding: 60px 0 20px 0;
+}
+
+.proyectos-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 35px;
+    letter-spacing: -0.5px;
+    border-bottom: 2px solid var(--kombu-green);
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+
+/* grid layout */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* tarjetas */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--tan);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: var(--kombu-green);
+    box-shadow: 0 12px 24px rgba(76, 61, 25, 0.08);
+}
+
+.categoria {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--moss-green);
+    font-weight: 700;
+}
+
+.card-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 8px 0 16px 0;
+    color: var(--text-primary);
+}
+
+.card-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+/* badges de tecnologias */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.badge {
+    background-color: rgba(136, 144, 99, 0.2);
+    color: var(--kombu-green);
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--moss-green);
+}
+
+/* footer de tarjetas y botones */
+.card-footer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding-top: 16px;
+    border-top: 1px solid rgba(76, 61, 25, 0.1);
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--kombu-green);
+    color: var(--bone);
+}
+
+.btn-primary:hover {
+    background-color: var(--cafe-noir);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--kombu-green);
+    border: 1px solid var(--kombu-green);
+}
+
+.btn-secondary:hover {
+   background-color: var(--kombu-green);
+    color: var(--bone);
+}
+
+.estado {
+    font-size: 0.85rem;
+    color: var(--moss-green);
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 40px 0 20px 0;
+    margin-top: 60px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--tan);
+}
