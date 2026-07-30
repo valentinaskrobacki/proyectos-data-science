@@ -8,7 +8,7 @@
 
     --bg-main: var(--bone);
     --card-bg: #f2e9dc;
-    --text-primary: var(--café-noir);
+    --text-primary: var(--cafe-noir);
     --text-secondary: var(--kombu-green);
     --accent: var(--kombu-green);
     --border: var(--tan);
@@ -203,4 +203,121 @@ footer {
     color: var(--text-secondary);
     font-size: 0.85rem;
     border-top: 1px solid var(--tan);
+}
+
+/* responsive */
+
+/* tablets y pantallas intermedias */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0 35px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    .proyectos-section {
+        padding: 40px 0 10px 0;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* celulares */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero {
+        padding: 45px 0 25px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .subtitulo {
+        font-size: 0.95rem;
+    }
+
+    .proyectos-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .grid-proyectos {
+        grid-template-columns: 1fr;
+    }
+
+    .card-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* celulares mas pequeños */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 14px;
+    }
+
+    .hero {
+        padding: 35px 0 20px 0;
+    }
+
+    .hero h1 {
+        font-size: 1.45rem; 
+        letter-spacing: -0.3px;
+        margin-bottom: 12px;
+    }
+
+    .subtitulo {
+        font-size: 0.88rem;
+        line-height: 1.5;
+    }
+
+    .proyectos-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .card-body p {
+        font-size: 0.88rem;
+    }
+
+    .badge {
+        font-size: 0.72rem;
+        padding: 4px 10px;
+    }
+
+    .btn {
+        padding: 9px 14px;
+        font-size: 0.8rem;
+    }
 }
